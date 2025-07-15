@@ -14,7 +14,8 @@ st.set_page_config(page_title="Helmet Detection", layout="centered")
 # -------------------------------
 @st.cache_resource
 def load_model():
-    return torch.hub.load('yolov5', 'custom', path='best.pt', source='local')
+    return torch.hub.load('ultralytics/yolov5', 'custom', path='best.pt')
+
 
 model = load_model()
 
